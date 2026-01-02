@@ -45,6 +45,8 @@ namespace GameEngine
         private int _currentLevelIndex = 0;
         private bool _isPaused = false;
         protected NetworkManager _networkManager;
+        
+        public Camera Camera => _camera;
         private float _networkUpdateTimer = 0f;
         private const float NETWORK_UPDATE_INTERVAL = 0.1f;
 
@@ -1031,9 +1033,9 @@ namespace GameEngine
             }
         }
 
-        private void UpdateHitbox()
+        protected void UpdateHitbox()
         {
-            Hitbox = new Microsoft.Xna.Framework.Rectangle(
+            Hitbox = new Rectangle(
                 (int)Position.X,
                 (int)Position.Y,
                 Template.Width,
