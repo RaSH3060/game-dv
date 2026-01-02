@@ -1,0 +1,1 @@
+Nothing should be ignored based on the provided file changes, as they are all source code files (.cs files) and no build artifacts, dependencies, or temporary files are present in the change list.
